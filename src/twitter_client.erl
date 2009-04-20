@@ -596,7 +596,7 @@ social_graph_follower_ids(RootUrl, Login, Password, _Args) ->
 
 search(_RootUrl, _Login, _Password, Args) ->
     UrlBase = "http://search.twitter.com/search.json",
-    Body = request_url(get, build_url(UrlBase, Args), "", "", nil),
+    Body = request_url(get, build_url(UrlBase, Args), nil, nil, nil),
     parse_results(Body).
 
 %% % -
